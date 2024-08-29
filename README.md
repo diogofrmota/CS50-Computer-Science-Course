@@ -1,1 +1,3 @@
-"# Havard-CS50-Lecture-Exercices" 
+Repositório dedicado ao curso CS50 de Harvard.
+
+Atualizado

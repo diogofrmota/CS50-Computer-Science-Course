@@ -1,0 +1,1 @@
+Sequences para o exercício de python.

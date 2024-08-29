@@ -1,4 +1,4 @@
-Exercícios de tpc da primeira aula "C"
+Exercícios
 
 1 - Hello -> Ao escrever o meu nome, quero receber um Olá
 

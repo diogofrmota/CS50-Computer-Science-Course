@@ -31,7 +31,7 @@ with open(argv[1], 'r') as csv_file:
     params = []
     data = []
 
-    # Separando a primeira linha como parametro e o restando como dados
+    # Separa a primeira linha como parametro e o resto como dados
     for row in csv_reader:
         counter += 1
         if counter == 1:
@@ -39,10 +39,10 @@ with open(argv[1], 'r') as csv_file:
         else:
             data.append(row)
 
-    # passando todos os elementos, exceto o primeiro, à função getTotalSTRs
+    # passar todos os elementos, exceto o primeiro, à função getTotalSTRs
     total_STR = list(map(getTotalSTRs, params[1:]))
 
-    #Percorrendo array de dados e encontrando o nome correspondente
+    #Percorrer o array de dados e encontrar o nome correspondente
     for array in data:
         int_array = [int(value) for value in array[1:]]
 

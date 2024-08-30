@@ -1,1 +1,1 @@
-Databases para o exercício de python.
+Databases para o exercício de python e SQL.

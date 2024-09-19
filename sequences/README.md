@@ -1,1 +1,1 @@
-Sequences para o exercício de python.
+Sequences used for the python exercices.

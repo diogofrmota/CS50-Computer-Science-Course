@@ -1,26 +1,15 @@
-Exercícios
+# Exercises
 
-1 - Hello.c -> Ao escrever o meu nome, quero receber um Olá
-
-2 - Cash.c-> Este programa consegue dizer quantas moedas eu preciso de dar ao cliente depois de inserir o dinheiro que tenho de dar de troco.
-
-3 - mario-less.c -> Para usar o programa mario basta executa-lo e entrar com um número válido de 1 a 8 como no exemplo:
+1 - Hello.c -> When I enter my name, I want to receive a greeting "Hello".
+2 - Cash.c -> This program can calculate how many coins I need to give the customer after entering the amount of change I owe.
+3 - mario-less.c -> To use the mario program, simply execute it and input a valid number from 1 to 8, as shown in the example:
 ./mario Height: -1 Height: 0 Height: 42 Height: 50 Height: 4
-
-4 - Readability.c -> Um programa em C concebido para calcular o grau de dificuldade de leitura de um determinado texto utilizando a fórmula do índice de Coleman-Liau.
-
-5 - Substitution.c -> É um programa que executa uma cifra de substituição para um determinado texto.
-
-6 - Plurality.c -> Este programa é capaz de executar uma eleição a partir dos nomes fornecidos na entrada do programa.
-
-7 - Runoff.c -> Programa similar ao Plurality relacionado com a eleição mas com outra lógica.
-
-8 - Hello.py -> Escrever o nome e devolve "Hello, (nome)".
-
-9 - Dna.py -> Este programa é capaz de abrir dois arquivos, contendo, no primeiro, um CSV com a quantidade de STRs e com seus respectivos nomes, e no segundo, contendo uma sequencia de DNA. O programa é capaz de contar quantas repetições seguidas há de cada STR dentro da sequencia de DNA e devolver a maior. No final é dito o nome da pessoa que tem a quantidade correta de cada STR.
-
-10 - Cash.py -> Exercício nº2 escrito em Python.
-
-11 - Mario-more.py -> Versão Python do exercicio feito anteriormente em C.
-
-12 - Readability.py -> Versão do programa Readability.c em Python.
+4 - Readability.c -> A C program designed to calculate the readability level of a given text using the Coleman-Liau index formula.
+5 - Substitution.c -> This is a program that executes a substitution cipher for a given text.
+6 - Plurality.c -> This program can conduct an election using names provided in the program's input.
+7 - Runoff.c -> Program similar to Plurality concerning elections but with a different logic.
+8 - Hello.py -> Enter a name and it returns "Hello, (name)".
+9 - Dna.py -> This program can open two files, the first containing a CSV with the quantity of STRs and their respective names, and the second containing a sequence of DNA. The program can count how many consecutive repeats there are of each STR within the DNA sequence and return the highest count. In the end, it reveals the name of the person with the correct quantity of each STR.
+10 - Cash.py -> Exercise No. 2 written in Python.
+11 - Mario-more.py -> Python version of the exercise previously done in C.
+12 - Readability.py -> Python version of the Readability.c program.

@@ -4,8 +4,6 @@
 #include <string.h>
 #include <ctype.h>
 
-// VCHPRZGJNTLSKFBDQWAXEUYMOI
-
 int testKey(string key)
 {
     for (int i = 0; i < strlen(key); i++)
@@ -14,82 +12,63 @@ int testKey(string key)
         {
             return 1;
         }
-
-        for (int k = 0; k < strlen(key); k++)
+        for (int j = i + 1; j < strlen(key); j++)
         {
-            for (int j = 0; j < strlen(key); j++)
+            if (toupper(key[i]) == toupper(key[j]))
             {
-                if (key[k] == key[j] && k != j)
-                {
-                    return 1;
-                }
+                return 1;
             }
         }
-
     }
     return 0;
 }
 
-// VCHPRZGJNTLSKFBDQWAXEUYMOI
 int main(int argc, string argv[])
 {
-    string text = "VCHPRZGJNTLSKFBDQWAXEUYMOI";
-
     if (argc != 2)
     {
         printf("Usage: ./substitution key");
         return 1;
     }
-    else
+    
+    if (strlen(argv[1]) != 26)
     {
-        if (strlen(argv[1]) != 26)
-        {
-            return 1;
-        }
-
-        text = argv[1];
-
-        for (int i = 0; i < strlen(text); i++)
-        {
-            text[i] = toupper(text[i]);
-        }
-
-        if (testKey(text))
-        {
-            printf("Key must contain 26 characters.\n");
-            return 1;
-        }
+        printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
-    string plaintext = get_string("plaintext: ");
-    string ciphertext = plaintext;
+    if (testKey(argv[1]))
+    {
+        printf("Key characters must be unique.\n");
+        return 1;
+    }
 
-    int j = 0;
+
+    string plaintext = get_string("plaintext: ");
+    char ciphertext[strlen(plaintext) + 1];
+    strcpy(ciphertext, plaintext);
 
 
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        j = (int)plaintext[i];
-
-
-        if (plaintext[i] >= 'a' && plaintext[i] <= 'z')
+        if (isalpha(plaintext[i]))
         {
-            ciphertext[i] = text[j - 97];
-            ciphertext[i] = ciphertext[i] + 32;;
-        }
-        else
-        {
-            if (plaintext[i] >= 'A' && plaintext[i] <= 'Z')
+            if(islower(plaintext[i]))
             {
-                ciphertext[i] = text[j - 65];
+                ciphertext[i] = tolower(argv[1][plaintext[i] - 'a']);
             }
             else
             {
-                ciphertext[i] = plaintext[i];
+                ciphertext[i] = toupper(argv[1][plaintext[i] - 'A']);
             }
+        }
+        else 
+        {
+            ciphertext[i] = plaintext[i];
         }
     }
 
+    ciphertext[strlen(plaintext)] = '\0';
     printf("ciphertext: %s\n", ciphertext);
 
     return 0;

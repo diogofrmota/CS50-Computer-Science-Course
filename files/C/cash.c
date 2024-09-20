@@ -24,6 +24,6 @@ int main(void)
     c5 = (cents - (c25 * 25) - (c10 * 10)) / 5; // Calcular os centimos a dividir por 5
     c1 = cents - (c25 * 25) - (c10 * 10) - (c5 * 5); // Calcular os centimos a dividir por 1
 
-    printf("%i\n", c25 + c10 + c5 + c1); \\ Numero total de moedas a dar
+    printf("%i\n", c25 + c10 + c5 + c1); // Numero total de moedas a dar
 
 }

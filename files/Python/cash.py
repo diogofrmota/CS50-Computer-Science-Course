@@ -1,18 +1,20 @@
 from cs50 import get_float
 
-cash = get_float("cash: ")
+cash = -1
+while cash < 0:
+    cash = get_float("cash: ")
 
-while True:
-    if cash >= 0:
+cents = int(cash * 100)
 
-        cents = int(cash * 100)
+c25 = cents // 25
+cents %= 25
 
-        c25 = int(cents / 25)
-        c10 = int((cents - (c25 * 25)) / 10)
-        c5 = int((cents - (c25 * 25) - (c10 * 10)) / 5)
-        c1 = int(cents - (c25 * 25) - (c10 * 10) - (c5 * 5))
-        print(c25 + c10 + c5 + c1)
+c10 = cents // 10
+cents %= 10
 
-        break
-    else:
-        cash = get_float("cash: ")
+c5 = cents // 5
+cents %= 5
+
+c1 = cents
+
+print(c25 + c10 + c5 + c1)
